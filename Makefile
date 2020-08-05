@@ -5,6 +5,7 @@ get-backend:
 
 run:
 	pm2 start ecosystem.config.js --env production;\
+	pm2 startup;\
 	pm2 save
 
 run-backend:

@@ -1,0 +1,27 @@
+{
+  "name": "microtracker",
+  "version": "1.0.0",
+  "description": "MicroTracker – affiliate marketing software",
+  "engines": {
+    "node": ">=14"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitry-makovsky/microtracker.git"
+  },
+  "keywords": [
+    "CPA",
+    "affiliate",
+    "marketing",
+    "tracker",
+    "conversions"
+  ],
+  "author": "Dmitry Makovsky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmitry-makovsky/microtracker/issues"
+  },
+  "homepage": "https://github.com/dmitry-makovsky/microtracker#readme",
+  "dependencies": {},
+  "devDependencies": {}
+}

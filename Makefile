@@ -1,3 +1,8 @@
+get-all: get-backend
+
+get-backend:
+	git clone https://github.com/dmitry-makovsky/microtracker-backend.git backend
+
 run:
 	pm2 start ecosystem.config.js --env production;\
 	pm2 save

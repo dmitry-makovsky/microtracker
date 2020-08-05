@@ -1,3 +1,0 @@
-[submodule "backend"]
-	path = backend
-	url = http://github.com/dmitry-makovsky/microtracker-backend.git

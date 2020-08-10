@@ -9,6 +9,9 @@ install-modules:
 migrate-seed:
 	sh scripts/migrateSeed.sh
 
+clean-db:
+	sh scripts/cleanDb.sh
+
 pm2-reinstall:
 	pm2 delete all;\
 	pm2 start ecosystem.config.js;\

@@ -103,6 +103,7 @@ dist
 # TernJS port file
 .tern-port
 
-ecosystem.config.js
 .DS_Store
+.vscode
 backend
+core

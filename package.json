@@ -2,6 +2,10 @@
   "name": "microtracker",
   "version": "1.0.0",
   "description": "MicroTracker – affiliate marketing software",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "engines": {
     "node": ">=14"
   },
@@ -22,6 +26,24 @@
     "url": "https://github.com/dmitry-makovsky/microtracker/issues"
   },
   "homepage": "https://github.com/dmitry-makovsky/microtracker#readme",
-  "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.8",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.7",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^24.1.3",
+    "jest": "^26.6.3",
+    "jest-cli": "^26.6.3",
+    "lerna": "^3.22.1",
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "lodash": "^4.17.20"
+  }
 }

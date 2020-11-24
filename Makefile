@@ -1,24 +1,15 @@
-install: get-modules install-modules migrate-seed pm2-reinstall
+install:
+	npx lerna bootstrap
 
-get-modules:
-	sh scripts/getModules.sh
+test:
+	npx lerna run test --stream
 
-install-modules:
-	sh scripts/installModules.sh
+test-api:
+	npx lerna run --scope api test --stream
 
-migrate-seed:
-	sh scripts/migrateSeed.sh
+test-frontend:
+	npx lerna run --scope frontend test --stream
 
-clean-db:
-	sh scripts/cleanDb.sh
-
-pm2-reinstall:
-	pm2 delete all;\
-	pm2 start ecosystem.config.js;\
-	pm2 startup;\
-	pm2 save
-
-run:
-	pm2 start ecosystem.config.js --env production;\
-	pm2 startup;\
-	pm2 save
+lint:
+	npx lerna exec --stream eslint .
+	

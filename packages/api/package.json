@@ -1,0 +1,10 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "babel-node src/bin/server.js",
+    "test": "../../node_modules/.bin/jest --colors"
+  }
+}

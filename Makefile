@@ -12,4 +12,6 @@ test-frontend:
 
 lint:
 	npx lerna exec --stream eslint .
-	
+
+dev:
+	lerna run dev --stream

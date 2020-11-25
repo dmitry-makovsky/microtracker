@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
   root: true,
   plugins: ['jest', 'babel', 'import-monorepo'],
@@ -16,7 +14,6 @@ module.exports = {
   rules: {
     'no-console': 0,
     'import/extensions': 0,
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true, packageDir: path.join(__dirname, './') }],
   },
   settings: {
     'import/resolver': {

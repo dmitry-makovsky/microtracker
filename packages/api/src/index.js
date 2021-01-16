@@ -1,3 +1,9 @@
-import _ from 'lodash';
+import http from 'http';
 
-export default (text) => _.capitalize(text);
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello from api!');
+});
+
+export default server;

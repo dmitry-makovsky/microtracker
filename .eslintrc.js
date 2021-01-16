@@ -1,6 +1,6 @@
 module.exports = {
   root: true,
-  plugins: ['jest', 'babel', 'import-monorepo'],
+  plugins: ['jest', 'babel'],
   env: {
     browser: true,
     node: true,

@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "microtracker-api",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -7,8 +7,19 @@
     "start": "node dist/bin/server.js",
     "build": "rm -rf dist && npm run build-server",
     "build-server": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
-    "test": "../../node_modules/.bin/jest --colors",
+    "test": "npx jest --colors",
     "dev": "npx nodemon --exec DEBUG=api:* babel-node src/bin/server.js"
+  },
+  "devDependencies": {
+    "supertest": "^6.1.1",
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.8",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.7",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3",
+    "jest-cli": "^26.6.3",
+    "nodemon": "^2.0.6"
   },
   "dependencies": {
     "fastify": "^3.8.0",

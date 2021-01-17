@@ -8,3 +8,15 @@ services:
     user: "node"
     ports:
       - "${API_PORT}:${API_PORT}"
+  proxy:
+    container_name: "microtracker-proxy"
+    image: envoyproxy/envoy-alpine:v1.17-latest
+    restart: unless-stopped
+    ports:
+      - "${HTTP_PORT}:${HTTP_PORT}"
+      - "${HTTPS_PORT}:${HTTPS_PORT}"
+      - "9000:8001"
+    volumes:
+      - "./packages/proxy/envoy.yaml:/etc/envoy/envoy.yaml"
+    depends_on:
+      - api
